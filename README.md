@@ -1,0 +1,48 @@
+# Floating-Point-Arimetic
+Python class project that accepts floating point numbers and performs basic arithmetic.
+##
+#  Program that prompts a user to input floating point numbers and outputs the count, sum, average, minimum, and maximum of the numbers.
+#
+
+# Defining constants and variables
+QUIT = 0
+total = 0
+count = 0
+minimum = None
+maximum = None
+
+# Prompting user to into floating point numbers
+userFloats = float(input('Enter any floating point number or "0" to quit: '))
+
+# Counts, totals, and sets intital minimum and maximum numbers.
+if userFloats != QUIT :
+            total = total + userFloats
+            count = count + 1
+            maximum = userFloats
+            minimum = userFloats
+
+# Continues count, total, and records the minimum and maximum entries as they are entered.
+while userFloats != QUIT :
+        userFloats = float(input('Enter any floating point number or "0" to quit: '))
+        if userFloats != QUIT :
+            total = total + userFloats
+            count = count + 1
+
+        if minimum is None or userFloats < minimum and userFloats != QUIT : minimum = userFloats
+
+        if maximum is None or userFloats > maximum and userFloats != QUIT : maximum = userFloats        
+
+# Averages all floating point number.    
+if count != 0 : average = total / count
+# Prints count, total, average, minimum and maximum of the floating points entered.
+print("")
+
+print(count)
+
+print("%.2f" % total)
+
+print("%.2f" % average)
+
+print(minimum)
+
+print(maximum)
