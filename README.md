@@ -1,4 +1,4 @@
-# Floating-Point-Arimetic
+# Floating-Point-Arithmetic
 Python class project that accepts floating point numbers and performs basic arithmetic.
 ##
 #  Program that prompts a user to input floating point numbers and outputs the count, sum, average, minimum, and maximum of the numbers.
