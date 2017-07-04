@@ -1,0 +1,67 @@
+##
+# Program that totals all of the even integers bewteen 4 and 90 inclusive.
+#
+
+# Defining constants
+START = 4
+END = 90
+
+# Defining function that identifies and totals all of the even integers
+# between given two points.
+def evenInts(a, b) :
+    count = 0
+    for i in range (a, b + 1):
+        if(i % 2 == 0) :
+            count += i
+    return count
+
+# Calling function "evenInts" to indentify and total all even integers beween 4
+# and 90.
+print(evenInts(START, END))
+-----------------------------------------------------------------------------
+##
+#  Program that prompts a user to input floating point numbers
+#  and out the count, sum, average, minimum, and maximum of the numbers.
+#
+
+# Defining constants and variables
+QUIT = 0
+total = 0
+count = 0
+minimum = None
+maximum = None
+
+# Prompting user to into floating point numbers
+userFloats = float(input('Enter any floating point number or "0" to quit: '))
+
+# Counts, totals, and sets intital minimum and maximum numbers.
+if userFloats != QUIT :
+            total = total + userFloats
+            count = count + 1
+            maximum = userFloats
+            minimum = userFloats
+
+# Continues count, total, and records the minimum and maximum entries as they
+# are entered.
+while userFloats != QUIT :
+        userFloats = float(input('Enter any floating point number or "0" to quit: '))
+        if userFloats != QUIT :
+            total = total + userFloats
+            count = count + 1
+
+        if minimum is None or userFloats < minimum and userFloats != QUIT : minimum = userFloats
+
+        if maximum is None or userFloats > maximum and userFloats != QUIT : maximum = userFloats        
+
+# Averages all floating point number.    
+if count != 0 : average = total / count
+# Prints count, total, average, minimum and maximum of the floating points
+# entered.
+print("")
+print(count)
+print("%.2f" % total)
+print("%.2f" % average)
+print(minimum)
+print(maximum)
+ 
+ 
